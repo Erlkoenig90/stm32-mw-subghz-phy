@@ -339,12 +339,11 @@ struct Radio_s
      */
     void    ( *ReadRegisters )( uint16_t addr, uint8_t *buffer, uint8_t size );
     /*!
-     * \brief Sets the maximum payload length.
+     * \brief Sets the payload length for receiving fixed-length packets
      *
-     * \param [in] modem      Radio modem to be used [0: FSK, 1: LoRa]
-     * \param [in] max        Maximum payload length in bytes
+     * \param [in] max        Payload length in bytes
      */
-    void    ( *SetMaxPayloadLength )( RadioModems_t modem, uint8_t max );
+    void    ( *SetPayloadLength )( uint8_t max );
     /*!
      * \brief Sets the network to public or private. Updates the sync byte.
      *
